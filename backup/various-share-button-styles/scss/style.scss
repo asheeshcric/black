@@ -1,0 +1,354 @@
+@import "compass/css3";
+
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+
+/* entypo */
+[class^="entypo-"]:before,  
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+$facebook:   #3b5998;
+$twitter:    #00a0d1;
+$gplus:      #db4a39;
+$pinterest:  #c8232c;
+$dribbble:   #ea4c89;
+$navy: #34495e;
+
+@mixin gradient($color){
+   @include background-image(linear-gradient(top, $color, darken($color, 10%))); 
+}
+
+*, *:after, *:before {
+   @include box-sizing(border-box); 
+}
+
+html, body {
+  background: #eff0f1;
+}
+
+.container {
+  width: 25em;
+  margin: 0 auto 3em auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.row {
+  margin: 0.5em 0;
+  float: left;
+  clear: both;
+  
+  i {cursor: pointer; display: inline-block; @include transition(all 0.15s ease)}
+  
+  
+  // First Set
+  &:first-child {
+      background: #f8f8f8;
+      padding: 0.5em 0;
+      border-radius: 8px;
+      @include box-shadow(0 1px 1px 0 rgba(black, 0.1));
+    
+    i {
+      border-right: 1px solid #e8e8e8;
+      border-left: 1px solid #fff;
+      padding: 0.5em 1em;
+      margin:0;
+      @include text-shadow(1px 1px 0 rgba(white, 1));
+      
+      &:hover {
+        color: $navy!important;
+      }
+    }
+      
+    i:nth-child(1){color: $facebook;border-left:none;}
+    i:nth-child(2){color: $twitter}
+    i:nth-child(3){color: $gplus}
+    i:nth-child(4){color: $pinterest}
+    i:nth-child(5){color: $dribbble;border-right:none;}
+  }
+  
+  // 4th Set
+  &:nth-child(4){
+    background: transparent;
+    
+    i {
+      color: $navy;
+      border-radius: 50%;
+      padding: 1em;
+      position: relative;
+      background: white;
+      @include box-shadow(0 1px 1px 0 rgba(black, 0.2));
+      
+      &:hover {
+         top: -3px;
+      }
+      
+      &:not(:first-child){
+         margin-left: 1em; 
+      }
+    }
+  }
+  
+  // 5th Set
+   &:nth-child(5){
+    background: transparent;
+    
+    i {
+      color: $navy;
+      border: 2px solid $navy;
+      border-radius: 50%;
+      padding: 1em;
+      position: relative;
+      background: transparent;
+      
+      &:hover {
+         background: $navy;
+         color: white;
+         top: -2px;
+      }
+      
+      &:not(:first-child){
+         margin-left: 1em; 
+      }
+    }
+   }
+  
+  // 2nd Set
+  &:nth-child(2){
+    background: transparent;
+    
+    i {
+      color: white;
+      padding: 1em;
+      position: relative;
+      background: transparent;
+      
+      &:hover {
+         top: -2px;
+      }
+    }
+    
+    i:nth-child(1){background: $facebook;border-left:none;}
+    i:nth-child(2){background: $twitter}
+    i:nth-child(3){background: $gplus}
+    i:nth-child(4){background: $pinterest}
+    i:nth-child(5){background: $dribbble;border-right:none;}
+   }
+  
+  // 6th Set
+  &:nth-child(6){
+    background: transparent;
+    
+    i {
+      color: white;
+      padding: 1em;
+      position: relative;
+      background: transparent;
+      
+      &:hover {border-radius: 50%;}
+      
+      &:not(:first-child){
+         margin-left: 1em; 
+      }
+    }
+    
+    i:nth-child(1){color: $facebook;border: 2px solid $facebook;
+      &:hover {color: white; background: $facebook;}
+    }
+    i:nth-child(2){color: $twitter; border: 2px solid $twitter;
+      &:hover {color: white; background: $twitter;}
+    }
+    i:nth-child(3){color: $gplus;border: 2px solid $gplus;
+      &:hover {color: white; background: $gplus;}
+    }
+    i:nth-child(4){color: $pinterest;border: 2px solid $pinterest;
+      &:hover {color: white; background: $pinterest;}
+    }
+    i:nth-child(5){color: $dribbble;border: 2px solid $dribbble;
+      &:hover {color: white; background: $dribbble;}
+    }
+   }
+  
+  // Third Set
+  &:nth-child(3){
+    background: transparent;
+    
+    i {
+      color: white;
+      padding: 1em;
+      position: relative;
+      background: transparent;
+      
+    }
+    
+    i:nth-child(1){@include gradient($facebook);border-radius:8px 0 0 8px;}
+    i:nth-child(2){@include gradient($twitter)}
+    i:nth-child(3){@include gradient($gplus)}
+    i:nth-child(4){@include gradient($pinterest)}
+    i:nth-child(5){@include gradient($dribbble);border-radius:0 8px 8px 0;}
+   }
+  
+  // 7th Set
+  &:nth-child(7) {
+      background: #fefefe;
+      @include box-shadow(0 1px 1px 0 rgba(black, 0.1));
+    
+    i {
+      border-right: 1px solid #e8e8e8;
+      padding: 1em;
+      margin:0;
+      @include text-shadow(1px 1px 0 rgba(white, 1));
+      color: #3a3a3a;
+      
+      &:hover {
+        @include box-shadow(inset 0 0 5px 0 rgba(black, 0.12));
+      }
+    }
+    i:nth-child(1){border-left:none;}
+    i:nth-child(5){border-right:none;}
+    i:nth-child(1):hover{color: $facebook;}
+    i:nth-child(2):hover{color: $twitter}
+    i:nth-child(3):hover{color: $gplus}
+    i:nth-child(4):hover{color: $pinterest}
+    i:nth-child(5):hover{color: $dribbble;}
+  }
+  
+  // 8th Set
+  &:nth-child(8) {
+     
+    
+    i {
+      padding: 1em;
+      margin:0;
+      color: white;
+      border-bottom: 5px solid #8e8e8e;
+      
+      &:hover {
+        border-bottom: 5px solid lighten(#8e8e8e, 2%);
+      }
+      
+      &:nth-child(2n){
+         background: #aaa;
+      }
+      
+      &:nth-child(2n + 1){
+         background: #8e8e8e;
+         
+      }
+    }
+    i:nth-child(1){border-left:none;}
+    i:nth-child(5){border-right:none;}
+    i:nth-child(1):hover{background: $facebook;border-bottom: 5px solid lighten($facebook, 10%);}
+    i:nth-child(2):hover{background: $twitter;border-bottom: 5px solid lighten($twitter, 10%);}
+    i:nth-child(3):hover{background: $gplus;border-bottom: 5px solid lighten($gplus, 10%);}
+    i:nth-child(4):hover{background: $pinterest;border-bottom: 5px solid lighten($pinterest, 10%);}
+    i:nth-child(5):hover{background: $dribbble;border-bottom: 5px solid lighten($dribbble, 10%);}
+  }
+  
+  &:nth-child(9){
+    background: transparent;
+    
+    i {
+      color: $navy;
+      border: 2px solid transparent;
+      border-radius: 0%;
+      padding: 1em;
+      position: relative;
+      background: transparent;
+      
+      &:hover {
+         top: -2px;
+         border-radius: 50%;
+      }
+      
+      &:not(:first-child){
+         margin-left: 1em; 
+      }
+    }
+    
+    i:nth-child(1){color: $facebook;border-bottom-color:$facebook;}
+    i:nth-child(2){color: $twitter;border-bottom-color:$twitter;}
+    i:nth-child(3){color: $gplus;border-bottom-color:$gplus;}
+    i:nth-child(4){color: $pinterest;border-bottom-color:$pinterest;}
+    i:nth-child(5){color: $dribbble;border-bottom-color:$dribbble;}
+   }
+  
+  &:nth-child(10){
+    background: transparent;
+    margin-top: 2em!important;
+    
+    i {
+      color: $navy;
+      border: 2px solid;
+      border-radius: 50%;
+      padding: 0.5em;
+      position: relative;
+      background: transparent;
+      
+      &:hover {
+         top: -2px;
+         border-radius: 50%;
+         color: white!important;
+      }
+      
+      &:not(:first-child){
+         margin-left: 1em; 
+      }
+    }
+    
+    i:nth-child(1){color: $facebook;border-color:$facebook;}
+    i:nth-child(2){color: $twitter;border-color:$twitter;}
+    i:nth-child(3){color: $gplus;border-color:$gplus;}
+    i:nth-child(4){color: $pinterest;border-color:$pinterest;}
+    i:nth-child(5){color: $dribbble;border-color:$dribbble;}
+    
+    
+    i:nth-child(1):hover{background: $facebook;}
+    i:nth-child(2):hover{background: $twitter;}
+    i:nth-child(3):hover{background: $gplus;}
+    i:nth-child(4):hover{background: $pinterest;}
+    i:nth-child(5):hover{background: $dribbble;}
+   }
+  
+  
+  
+  
+    &:nth-child(11){
+      
+      
+      i:nth-child(1){color: $facebook;border-color:$facebook;}
+      i:nth-child(2){color: $twitter;border-color:$twitter;}
+      i:nth-child(3){color: $gplus;border-color:$gplus;}
+      i:nth-child(4){color: $pinterest;border-color:$pinterest;}
+      i:nth-child(5){color: $dribbble;border-color:$dribbble;}
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}

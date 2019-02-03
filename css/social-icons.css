@@ -1,0 +1,47 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+/* entypo */
+[class^="entypo-"]:before,
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+
+.social-icon {
+    background: transparent;
+    cursor: pointer;
+    margin-left: 3em;
+}
+
+.social-icon i {
+    color: #34495e;
+    border: 2px solid transparent;
+    border-radius: 0%;
+    padding: 1em;
+    position: relative;
+    background: transparent;
+}
+
+.social-icon i:hover {
+    top: -2px;
+    border-radius: 50%;
+}
+
+.social-icon .entypo-facebook {
+    color: #3C5A99 !important;
+    border-bottom-color: #3C5A99 !important;
+}
+
+.social-icon .entypo-twitter {
+    color: #00a0d1 !important;
+    border-bottom-color: #00a0d1 !important;
+}
+
+.social-icon .entypo-github {
+    color: #333 !important;
+    border-bottom-color: #333 !important;
+}
+
+.social-icon .entypo-linkedin {
+    color: #0077B5 !important;
+    border-bottom-color: #0077B5 !important;
+}
