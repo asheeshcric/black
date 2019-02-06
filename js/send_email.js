@@ -31,7 +31,7 @@ $('#send_message').click(function () {
         }, 3000);
         return;
     }
-    // sendEmail(from_name, from_email, subject, email_message);
+    sendEmail(from_name, from_email, subject, email_message);
     $("#success_alert").removeClass('hidden');
     setTimeout(function () {
         $('#success_alert').addClass('hidden');
