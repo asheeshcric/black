@@ -25,9 +25,16 @@ $('#send_message').click(function () {
         subject = $('input[name="subject"]').val(),
         email_message = $('#email_message').val();
     if (!from_email || !email_message || !subject || !from_name){
-        alert('Please fill in all the fields!');
+        $("#danger_alert").removeClass('hidden');
+        setTimeout(function () {
+            $('#danger_alert').addClass('hidden');
+        }, 3000);
         return;
     }
-    sendEmail(from_name, from_email, subject, email_message);
-    location.reload();
+    // sendEmail(from_name, from_email, subject, email_message);
+    $("#success_alert").removeClass('hidden');
+    setTimeout(function () {
+        $('#success_alert').addClass('hidden');
+        $('#contact_form').find("input[type=text], textarea").val("");
+    }, 3000);
 });

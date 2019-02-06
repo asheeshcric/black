@@ -881,7 +881,13 @@
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box"
                                      data-animate-effect="fadeInRight">
-                                    <form action="javascript:">
+                                    <div class="alert alert-danger hidden" id="danger_alert">
+                                        <strong>Oops!</strong> Please fill in all the details.
+                                    </div>
+                                    <div class="alert alert-success hidden" id="success_alert">
+                                        <strong>Success!</strong> I will respond back shortly.
+                                    </div>
+                                    <form action="javascript:" id="contact_form">
                                         <div class="form-group">
                                             <input type="text" class="form-control" placeholder="Name" name="from_name" required>
                                         </div>
